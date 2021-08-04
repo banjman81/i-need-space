@@ -26,15 +26,15 @@
             </div>
             <div class="row">
                 <label>Mapbox API Key</label>
-                <input id="api-key" />
+                <input id="api-key"/>
             </div>
             <div class="row">
                 <label>Address</label>
-                <input id="address" />
+                <input id="address" value="" />
             </div>
             <div class="row">
                 <label>Satellite NORAD</label>
-                <input id="norad" />
+                <input id="norad"  value=""/>
             </div>
             <div class="row">
                 <button id="search">
@@ -85,9 +85,12 @@
                 <b>Find more of the brightest satellites' NORAD IDs&nbsp;<a href="https://www.n2yo.com/satellites/?c=1">here</a>.</b>
             </div>
         </div>
+        <div class="result-display">
+
+        </div>
 
     </div>
-
+    <script src="jquery-3.6.0.min.js"></script>
     <script src="apiKey.js"></script>
     <script src="main.js"></script>
 </body>

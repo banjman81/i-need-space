@@ -62,7 +62,7 @@ async function getLocation(key, address, norad){
                             </tr>
                             <tr>
                                 <td class="bold-td">Enter time</td>
-                                <td>${(object.rise.utc_datetime).slice(11,19)}</td>
+                                <td>${(object.rise.utc_datetime).slice(11,19)}UTC</td>
                             </tr>
                             <tr>
                                 <td class="bold-td">Exit date</td>
@@ -70,7 +70,7 @@ async function getLocation(key, address, norad){
                             </tr>
                             <tr>
                                 <td class="bold-td">Exit time</td>
-                                <td>${(object.set.utc_datetime.slice(11,19))}</td>
+                                <td>${(object.set.utc_datetime.slice(11,19))}UTC</td>
                             </tr>
                             <tr>
                                 <td class="bold-td">Direction of travel</td>

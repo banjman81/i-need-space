@@ -16,8 +16,18 @@ async function getLocation(key, address, norad){
         const rawSat = await fetch(getSat)
         const sattelite = await rawSat.json()
         // console.log(sattelite.length)
+        let length = ""
+        console.log(sattelite.error ,'here man')
+        if(sattelite.error == 'TLE not found'){
+            length = 0
+            const iterations = $(`
+                <h4>Norad ${norad} is nowhere to be found.</h4>
+            `)
+            resultDisplay.append(iterations)
+        }
+        else{
         const iterations = $(`
-            <h4 >Norad ${norad} will be visible for <span class="red">${sattelite.length}</span> time(s) in the next 7 days.</h4>
+            <h4 >Norad ${norad} will be visible for <span class="red">${length}</span> time(s) in the next 7 days.</h4>
         `)
         resultDisplay.append(iterations)
         // function for each page loaded
@@ -128,8 +138,9 @@ async function getLocation(key, address, norad){
                 }
             }
         })
+            
+    }
 }
-
 
 // search handler
 search.on('click', function(){
